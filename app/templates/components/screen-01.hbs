@@ -1,0 +1,82 @@
+{{#ui-navigation logo='logo desktop ipad' logoWidth='128px' svgWidth='197' svgHeight='54'
+                 local-class='nav' as |item index|}}
+
+{{/ui-navigation}}
+
+<div local-class='container'>
+  {{#ui-grid local-class='header'}}
+    <div class='column six' local-class='logo-column'>
+      <div local-class='logo'>
+        {{ui-icon 'health-16px_humidity-52' 48 48 type='logo' fill='#FACA00' iconColor='#212F40'}}
+        <div>
+          <h2>上海电信移动网络客户数据系统</h2>
+          <p>Mobile network customer database system</p>
+        </div>
+      </div>
+    </div>
+    <div class='column ten group'>
+      <div class='column trisector'>
+        {{#ui-pane}}
+
+        {{/ui-pane}}
+      </div>
+      <div class='column trisector'>
+        {{#ui-pane}}
+          <div local-class='pane two'>
+            <span>Tile</span>
+            {{ui-progress '4G' subLabel='803,234' size='tiny' color='lime' progress='50' percent=true position='out'}}
+            <div local-class='sub-label'>
+              {{ui-icon 'arrows-16px-1_tail-up' 8}}
+              <span>subLabel</span>
+            </div>
+          </div>
+        {{/ui-pane}}
+      </div>
+      <div class='column trisector'>
+        {{#ui-pane}}
+          <div local-class='pane three'>
+            <span>Tile</span>
+            {{ui-progress '4G' subLabel='803,234' size='tiny' color='purple' progress='50' percent=true position='out'}}
+            <div local-class='sub-label'>
+              {{ui-icon 'arrows-16px-1_tail-up' 8}}
+              <span>subLabel</span>
+            </div>
+          </div>
+        {{/ui-pane}}
+      </div>
+    </div>
+  {{/ui-grid}}
+
+  {{#ui-grid local-class='chart'}}
+    <div class='column sixteen'>
+      {{#ui-pane icon='location-16px_pin' iconColor='#FACA00' title='Title'}}
+        <div local-class='data'>
+          <div local-class='4g'>
+            {{echart/ec-circle height='200' name='预付占比' value=75
+                               fontSize= 14
+                               primaryColor='#ab7df6'
+                               secondaryColor='#40446d'
+                               labelColorTop='#fff'
+                               labelColorBottom='#6d869d'}}
+            {{echart/ec-circle height='200' name='后付占比' value=62
+                               primaryColor='#26c1c9'
+                               secondaryColor='#255264'}}
+          </div>
+          <div local-class='3g'>
+            {{echart/ec-circle height='200' name='预付占比' value=56
+                               primaryColor='#81c926'
+                               secondaryColor='#375344'}}
+            {{echart/ec-circle height='200' name='后付占比' value=45
+                               primaryColor='#ffcd06'
+                               secondaryColor='#51543d'}}
+          </div>
+        </div>
+        <div local-class='bottom-nav'>
+          {{#each citys as |item|}}
+            {{ui-item item click=(action 'handleSelectCity' item)}}
+          {{/each}}
+        </div>
+      {{/ui-pane}}
+    </div>
+  {{/ui-grid}}
+</div>

@@ -1,0 +1,71 @@
+<div local-class='container'>
+  {{#ui-grid}}
+    <div class='column ten'>
+      {{#ui-pane title='该区域所以基站连接总人数'}}
+          {{echart/ec-bar-line height='200' unit='k' data=data1
+          xAxisLabelColor='#26c1c9'
+          yAxisLabelColor='#26c1c9'
+                               itemBarColor='#81c926'
+          itemLineColor='#81c926'
+          itemBgColor='#81c926'
+          itemBgOpcaity='0.06'
+          itemLineTextColor='#81c926'
+          }}
+      {{/ui-pane}}
+    </div>
+    <div class='column six group'>
+      <div class='column eight'>
+        {{#ui-pane title='基站'}}
+          {{ui-item 'Base station' icon='ui-16px-2_chart-bar-53'}}
+          {{ui-item 'Base station' icon='ui-16px-2_chart-bar-53'}}
+          {{ui-item 'Base station' icon='ui-16px-2_chart-bar-53'}}
+          {{ui-item 'Base station' icon='ui-16px-2_chart-bar-53'}}
+          {{ui-item 'Base station' icon='ui-16px-2_chart-bar-53'}}
+        {{/ui-pane}}
+      </div>
+      <div class='column eight'>
+        {{#ui-pane title='用户数'}}
+          {{ui-item 'Uesrs name' icon='users-16px_single-body'}}
+          {{ui-item 'Uesrs name' icon='users-16px_single-body'}}
+          {{ui-item 'Uesrs name' icon='users-16px_single-body'}}
+          {{ui-item 'Uesrs name' icon='users-16px_single-body'}}
+          {{ui-item 'Uesrs name' icon='users-16px_single-body'}}
+        {{/ui-pane}}
+      </div>
+    </div>
+  {{/ui-grid}}
+
+  {{#ui-grid}}
+    <div class='column six'>
+      {{#ui-pane title='高净值用户'}}
+        <div local-class='pane'>
+          {{ui-progress '4G' subLabel='803,234' size='tiny' color='lime' progress='50' percent=true position='out'}}
+          {{ui-progress '4G' subLabel='803,234' size='tiny' color='lime' progress='50' percent=true position='out'}}
+          {{ui-progress '4G' subLabel='803,234' size='tiny' color='lime' progress='50' percent=true position='out'}}
+        </div>
+      {{/ui-pane}}
+    </div>
+    <div class='column ten group'>
+      <div class='column trisector'>
+        {{#ui-pane title='套餐情况'}}
+            {{echart/ec-pie height='200' name='套餐使用情况' data=data2 labelColor='#fff' labelFontSize='14'}}
+        {{/ui-pane}}
+      </div>
+      <div class='column trisector'>
+        {{#ui-pane title='年龄分布'}}
+            {{echart/ec-pie-circle height='200'  name='年龄分布' data=data3}}
+        {{/ui-pane}}
+      </div>
+      <div class='column trisector'>
+        {{#ui-pane title='男女比例'}}
+            {{echart/ec-gauge height='200'  name='男女比例' value=46
+            primaryColor='#26c1c9'
+            secondaryColor='#234f62'
+            pointerColor='#26c1c9'
+            titleColor='#81c926'
+            }}
+        {{/ui-pane}}
+      </div>
+    </div>
+  {{/ui-grid}}
+</div>

@@ -1,0 +1,12 @@
+{{#ui-navigation '12313' local-class='nav' as |item index|}}
+  {{ui-item city}}
+
+  {{ui-item '2017 - 02 - 18' tagName='div' local-class='time'}}
+{{/ui-navigation}}
+<div local-class='container' style="height: 600px;">
+  {{map/area-location city=city mapBaseData=mapBaseData borderColor='#26c1c9'}}
+</div>
+
+{{ui-button '3G基站' click=(action 'handleSelectBaseStation' 'type' '3G')}}
+{{ui-button '4G基站' click=(action 'handleSelectBaseStation' 'type' '4G')}}
+{{ui-button '基站Top10' click=(action 'handleSelectBaseStation' 'rank' '10')}}

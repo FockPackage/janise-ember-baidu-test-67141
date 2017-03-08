@@ -1,0 +1,10 @@
+.container {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pane {
+  padding: 1rem;
+}

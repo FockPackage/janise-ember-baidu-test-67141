@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EmberChoiceApplication</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1", user-scalable=no">
+
+    {{content-for "head"}}
+
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/mobile-network-customer-database-system.css">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body class='theme dark'>
+    {{content-for "body"}}
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=BqkqH5HBlNmVi6NyGusWkPGHHtdiKnhL"></script>
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/mobile-network-customer-database-system.js"></script>
+
+    {{content-for "body-footer"}}
+    <div id="ember-basic-dropdown-wormhole"></div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+.nav {
+  background-color: var(--cool-blue);
+}
+
+.time {
+  margin-left: auto;
+}
+
+.container {
+  width: 100%;
+}
